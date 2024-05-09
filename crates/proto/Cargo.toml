@@ -50,7 +50,6 @@ dns-over-https-rustls = ["dns-over-https"]
 dns-over-https = ["bytes", "h2", "http", "dns-over-rustls", "tokio-runtime"]
 dns-over-quic = [
     "quinn",
-    "rustls/quic",
     "dns-over-rustls",
     "bytes",
     "tokio-runtime",
@@ -113,7 +112,7 @@ openssl = { workspace = true, features = ["v102", "v110"], optional = true }
 quinn = { workspace = true, optional = true, features = [
     "log",
     "runtime-tokio",
-    "tls-rustls",
+    "rustls",
 ] }
 rand.workspace = true
 ring = { workspace = true, optional = true, features = ["std"] }
